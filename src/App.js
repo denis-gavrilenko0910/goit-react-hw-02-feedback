@@ -10,11 +10,15 @@ class App extends React.Component {
     neutral: 0,
     bad: 0,
   };
-  handleIncrement = () => {
+  handleIncrement = (event) => {
     this.setState((prevState) => {
+      console.log(event);
       return {
+        // if (event) {
+
+        // }
+
         good: prevState.good + 1,
-        neutral: prevState.neutral + 1,
         bad: prevState.bad + 1,
       };
     });
@@ -24,7 +28,10 @@ class App extends React.Component {
       <div>
         <Container>
           <Section title="">
-            <FeedbackOptions options={onclick} onLeaveFeedback={this.state} />
+            <FeedbackOptions
+              options={this.state}
+              onLeaveFeedback={this.handleIncrement}
+            />
           </Section>
           <Section title="">
             <Statistics
@@ -38,5 +45,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;

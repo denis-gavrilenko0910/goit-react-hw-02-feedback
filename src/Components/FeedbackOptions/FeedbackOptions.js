@@ -1,39 +1,25 @@
-// import React from "react";
-// import Section from "../Section/Section";
-function FeedbackOptions({ options }) {
+function FeedbackOptions({ options, onLeaveFeedback }) {
+  // console.log(options);
+  // console.log(onLeaveFeedback);
   return (
     <div>
-      <button
-        type="button"
-        onClick={() => {
-          console.log("good");
-        }}
-      >
-        {}
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          console.log("neutral");
-        }}
-      >
-        neutral
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          console.log("bad");
-        }}
-      >
-        bad
-      </button>
+      <ul>
+        {Object.keys(options).map((item, index, arr) => (
+          <li key={index}>
+            <button
+              type="button"
+              onClick={(event) => {
+                onLeaveFeedback(event.target);
+              }}
+            >
+              {arr[index]}
+            </button>
+          </li>
+        ))}
+      </ul>
 
       {/* {console.log(options, onLeaveFeedback)} */}
     </div>
   );
 }
-
-// function FeedbackOptions() {
-//   return;
-// }
 export default FeedbackOptions;
