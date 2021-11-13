@@ -10,35 +10,27 @@ class App extends React.Component {
     neutral: 0,
     bad: 0,
   };
-  handleIncrement = (event) => {
+  handleIncrement = (item) => {
     this.setState((prevState) => {
-      console.log(event);
       return {
-        // if (event) {
-
-        // }
-
-        good: prevState.good + 1,
-        bad: prevState.bad + 1,
+        [item]: prevState[item] + 1,
       };
     });
   };
   render() {
+    const optionsKeys = Object.keys(this.state);
+    const optionsAllStateData = Object.entries(this.state);
     return (
       <div>
         <Container>
-          <Section title="">
+          <Section title="Leave your feedback, please!">
             <FeedbackOptions
-              options={this.state}
+              options={optionsKeys}
               onLeaveFeedback={this.handleIncrement}
             />
           </Section>
           <Section title="">
-            <Statistics
-              good={this.setState}
-              neutral={this.setState}
-              bad={this.setState}
-            ></Statistics>
+            <Statistics optionsAllStateData={optionsAllStateData} />
           </Section>
         </Container>
       </div>

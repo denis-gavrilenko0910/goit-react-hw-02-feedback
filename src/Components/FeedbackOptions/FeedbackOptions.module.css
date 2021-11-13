@@ -1,0 +1,9 @@
+.button__list {
+  display: flex;
+}
+.button__items {
+  width: calc(100% / 3);
+}
+.button {
+  width: 100%;
+}

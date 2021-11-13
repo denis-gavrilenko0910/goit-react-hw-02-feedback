@@ -1,0 +1,15 @@
+.statistics__list {
+  width: 100%;
+  display: flex;
+}
+.statistics__items {
+  width: calc(100% / 3);
+  text-align: center;
+}
+.item,
+.item__value {
+  display: inline-block;
+}
+.item {
+  margin-right: 15px;
+}

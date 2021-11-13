@@ -1,25 +1,24 @@
+import { Fragment } from "react";
+import s from "./FeedbackOptions.module.css";
 function FeedbackOptions({ options, onLeaveFeedback }) {
-  // console.log(options);
-  // console.log(onLeaveFeedback);
   return (
-    <div>
-      <ul>
-        {Object.keys(options).map((item, index, arr) => (
-          <li key={index}>
+    <Fragment>
+      <ul className={s.button__list}>
+        {options.map((item) => (
+          <li key={item} className={s.button__items}>
             <button
+              className={s.button}
               type="button"
-              onClick={(event) => {
-                onLeaveFeedback(event.target);
+              onClick={() => {
+                onLeaveFeedback(item);
               }}
             >
-              {arr[index]}
+              {item}
             </button>
           </li>
         ))}
       </ul>
-
-      {/* {console.log(options, onLeaveFeedback)} */}
-    </div>
+    </Fragment>
   );
 }
 export default FeedbackOptions;
