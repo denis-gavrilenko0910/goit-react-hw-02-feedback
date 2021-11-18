@@ -1,17 +1,16 @@
-import { Fragment } from "react";
-import s from "./FeedbackOptions.module.css";
-function FeedbackOptions({ options, onLeaveFeedback }) {
+import { Fragment } from 'react';
+import s from './FeedbackOptions.module.css';
+
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <Fragment>
       <ul className={s.button__list}>
-        {options.map((item) => (
+        {options.map(item => (
           <li key={item} className={s.button__items}>
             <button
               className={s.button}
               type="button"
-              onClick={() => {
-                onLeaveFeedback(item);
-              }}
+              onClick={() => onLeaveFeedback(item)}
             >
               {item}
             </button>
@@ -21,4 +20,3 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
     </Fragment>
   );
 }
-export default FeedbackOptions;
