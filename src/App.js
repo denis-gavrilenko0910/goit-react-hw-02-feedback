@@ -2,6 +2,7 @@ import React from 'react';
 import Container from './components/Container';
 import Section from './components/Section/Section';
 import Statistics from './components/Statistics';
+import Notification from './components/Notification';
 import FeedbackOptions from './components/FeedbackOptions';
 
 class App extends React.Component {
@@ -18,9 +19,8 @@ class App extends React.Component {
     });
   };
   countTotalFeedback = () => {
-    let total = Object.values(this.state);
-    return total.reduce(
-      (prevState, currentValue) => (total = prevState + currentValue),
+    return Object.values(this.state).reduce(
+      (prevState, currentValue) => prevState + currentValue,
       0,
     );
   };
@@ -33,6 +33,8 @@ class App extends React.Component {
   render() {
     const optionsKeys = Object.keys(this.state);
     const optionsAllStateData = Object.entries(this.state);
+    const total = this.countTotalFeedback();
+    const positivPercent = this.positivePercentage();
     return (
       <Container>
         <Section title="Leave your feedback, please!">
@@ -43,11 +45,14 @@ class App extends React.Component {
           />
         </Section>
         <Section title="Statistics">
-          <Statistics
-            optionsAllStateData={optionsAllStateData}
-            total={this.countTotalFeedback()}
-            positivPercent={this.positivePercentage()}
-          />
+          {total && (
+            <Statistics
+              optionsAllStateData={optionsAllStateData}
+              total={total}
+              positivPercent={positivPercent}
+            />
+          )}
+          {!total && <Notification message="There are no feedbacks" />}
         </Section>
       </Container>
     );

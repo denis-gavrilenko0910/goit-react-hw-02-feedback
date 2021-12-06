@@ -10,5 +10,14 @@
 }
 .button {
   width: 100%;
+  height: 40px;
+  box-shadow: #74008f 0px 0px 15px 5px;
+  border-radius: 7px;
+
+  background: #3a106f;
+  text-transform: uppercase;
+  color: #b8b8b8;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
 }
