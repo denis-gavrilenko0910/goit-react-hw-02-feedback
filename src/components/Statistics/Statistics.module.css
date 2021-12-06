@@ -6,6 +6,7 @@
 .statistics__items {
   width: calc(100% / 3);
   text-align: center;
+  color: #757575;
 }
 .statistics__items:not(:last-child) {
   margin-right: 10%;
@@ -20,4 +21,9 @@
 }
 .total__container {
   text-align: center;
+}
+.results_menu {
+  display: flex;
+  justify-content: space-evenly;
+  color: #757575;
 }

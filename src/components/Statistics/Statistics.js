@@ -7,7 +7,6 @@ export default function Statistics({
   total,
   positivPercent,
 }) {
-  // console.log(typeof);
   return (
     <Fragment>
       <ul className={s.statistics__list}>
@@ -19,12 +18,16 @@ export default function Statistics({
         ))}
       </ul>
       <div className={s.total__container}>
-        <span className={s.item__total}>Total:</span>
-        <span className={s.item__total}>{total}</span>
-        <span className={s.item__positivPercnet}>
-          {positivPercent}
-          {console.log(typeof positivPercent)}
-        </span>
+        <ul className={s.results_menu}>
+          <li>
+            <span className={s.item__total}>Total:</span>
+            <span className={s.item__total}>{total}</span>
+          </li>
+          <li>
+            <span className={s.item__positivPercnet}>Positiv Percentage:</span>
+            <span className={s.item__positivPercnet}>{positivPercent}%</span>
+          </li>
+        </ul>
       </div>
     </Fragment>
   );

@@ -17,7 +17,6 @@ export default function FeedbackOptions({
               onClick={() => {
                 onLeaveFeedback(item);
                 countTotalFeedback();
-                // positivePercentage();
               }}
             >
               {item}

@@ -12,7 +12,6 @@ class App extends React.Component {
   };
   handleIncrement = item => {
     this.setState(prevState => {
-      console.log(prevState);
       return {
         [item]: prevState[item] + 1,
       };
@@ -25,40 +24,32 @@ class App extends React.Component {
       0,
     );
   };
-
   positivePercentage = () => {
-    let positivPercent = 0;
-    positivPercent = Math.round(
+    let positivPercent = Math.round(
       (this.state.good / this.countTotalFeedback()) * 100,
     );
-    console.log(positivPercent);
     return positivPercent;
   };
-
   render() {
-    const total = Object.values(this.state);
     const optionsKeys = Object.keys(this.state);
     const optionsAllStateData = Object.entries(this.state);
-    console.log(total);
     return (
-      <div>
-        <Container>
-          <Section title="Leave your feedback, please!">
-            <FeedbackOptions
-              options={optionsKeys}
-              onLeaveFeedback={this.handleIncrement}
-              countTotalFeedback={this.countTotalFeedback}
-            />
-          </Section>
-          <Section title="Statistics">
-            <Statistics
-              optionsAllStateData={optionsAllStateData}
-              total={this.countTotalFeedback()}
-              positivPercent={this.positivePercentage()}
-            />
-          </Section>
-        </Container>
-      </div>
+      <Container>
+        <Section title="Leave your feedback, please!">
+          <FeedbackOptions
+            options={optionsKeys}
+            onLeaveFeedback={this.handleIncrement}
+            countTotalFeedback={this.countTotalFeedback}
+          />
+        </Section>
+        <Section title="Statistics">
+          <Statistics
+            optionsAllStateData={optionsAllStateData}
+            total={this.countTotalFeedback()}
+            positivPercent={this.positivePercentage()}
+          />
+        </Section>
+      </Container>
     );
   }
 }

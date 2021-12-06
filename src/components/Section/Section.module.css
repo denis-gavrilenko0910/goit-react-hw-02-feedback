@@ -2,4 +2,35 @@
   margin: auto;
   text-align: center;
   margin-bottom: 15px;
+  animation-play-state: running;
+  color: transparent;
+  background: url('https://static.vecteezy.com/system/resources/previews/002/221/924/large_2x/glowing-neon-timing-belt-kit-icon-isolated-on-brick-wall-background-vector.jpg')
+    no-repeat #212121;
+  background-size: cover;
+  background-clip: text;
+  animation: move-background 11s infinite linear alternate;
+}
+@-webkit-keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+@-moz-keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
+}
+@keyframes move-background {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px -300px;
+  }
 }
