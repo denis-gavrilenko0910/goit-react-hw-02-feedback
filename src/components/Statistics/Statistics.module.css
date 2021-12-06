@@ -1,15 +1,23 @@
 .statistics__list {
   width: 100%;
   display: flex;
+  margin-bottom: 20px;
 }
 .statistics__items {
   width: calc(100% / 3);
   text-align: center;
 }
+.statistics__items:not(:last-child) {
+  margin-right: 10%;
+}
 .item,
-.item__value {
+.item__value,
+.item__total {
   display: inline-block;
 }
 .item {
   margin-right: 15px;
+}
+.total__container {
+  text-align: center;
 }

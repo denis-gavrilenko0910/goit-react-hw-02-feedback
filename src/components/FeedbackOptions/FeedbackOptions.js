@@ -1,7 +1,11 @@
 import { Fragment } from 'react';
 import s from './FeedbackOptions.module.css';
 
-export default function FeedbackOptions({ options, onLeaveFeedback }) {
+export default function FeedbackOptions({
+  options,
+  onLeaveFeedback,
+  countTotalFeedback,
+}) {
   return (
     <Fragment>
       <ul className={s.button__list}>
@@ -10,7 +14,11 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
             <button
               className={s.button}
               type="button"
-              onClick={() => onLeaveFeedback(item)}
+              onClick={() => {
+                onLeaveFeedback(item);
+                countTotalFeedback();
+                // positivePercentage();
+              }}
             >
               {item}
             </button>

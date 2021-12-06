@@ -1,9 +1,14 @@
 .button__list {
   display: flex;
+  margin-bottom: 20px;
 }
 .button__items {
   width: calc(100% / 3);
 }
+.button__items:not(:last-child) {
+  margin-right: 10%;
+}
 .button {
   width: 100%;
+  cursor: pointer;
 }
