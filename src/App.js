@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from './components/Container';
-import Section from './components/Section/Section';
+import Section from './components/Section';
 import Statistics from './components/Statistics';
 import Notification from './components/Notification';
 import FeedbackOptions from './components/FeedbackOptions';
@@ -41,7 +41,6 @@ class App extends React.Component {
           <FeedbackOptions
             options={optionsKeys}
             onLeaveFeedback={this.handleIncrement}
-            countTotalFeedback={this.countTotalFeedback}
           />
         </Section>
         <Section title="Statistics">

@@ -23,12 +23,8 @@ export default function Statistics({
             <span className={s.item__total}>Total:</span>
             <span className={s.item__total}>{total}</span>
           </li>
-        </ul>
-        <ul className={s.positivFeedbacks__menu}>
           <li>
             <span className={s.item__positivFeedbacks}>Positiv feedbacks:</span>
-          </li>
-          <li>
             <span className={s.item__positivPercnet}>{positivPercent}%</span>
           </li>
         </ul>

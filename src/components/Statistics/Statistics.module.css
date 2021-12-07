@@ -4,7 +4,7 @@
   margin-bottom: 20px;
 }
 .statistics__items {
-  width: calc(100% / 3) !important;
+  width: calc(100% / 3);
   height: 25px;
   border-radius: 7px;
   box-shadow: #00ff2f 0px 7px 17px -7px;
@@ -14,22 +14,17 @@
 .statistics__items:not(:last-child) {
   margin-right: 10%;
 }
-.item,
-.item__value,
-.item__total {
-  display: inline-block;
-}
 
-.results_menu,
-.positivFeedbacks__menu {
-  display: flex;
+.results_menu {
   color: #757575;
 }
 .item,
-.item__positivFeedbacks {
+.item__positivFeedbacks,
+.item__total {
   margin-right: 10%;
 }
+.item__total,
 .item__positivFeedbacks {
   width: 155px;
-  display: block;
+  display: inline-block;
 }
