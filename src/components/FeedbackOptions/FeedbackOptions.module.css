@@ -13,6 +13,8 @@
   height: 40px;
   box-shadow: #74008f 0px 0px 15px 5px;
   border-radius: 7px;
+  border-width: 0;
+  padding: 0;
 
   background: #3a106f;
   text-transform: uppercase;
@@ -20,4 +22,13 @@
   cursor: pointer;
   font-size: 15px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 859px) {
+  .button__items:not(:last-child) {
+    margin-right: 5%;
+  }
+  .button {
+    font-size: 12px;
+  }
 }

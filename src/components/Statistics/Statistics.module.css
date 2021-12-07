@@ -4,7 +4,7 @@
   margin-bottom: 20px;
 }
 .statistics__items {
-  width: calc(100% / 3);
+  width: calc(100% / 3) !important;
   height: 25px;
   border-radius: 7px;
   box-shadow: #00ff2f 0px 7px 17px -7px;
@@ -23,12 +23,11 @@
 .results_menu,
 .positivFeedbacks__menu {
   display: flex;
-  /* justify-content: space-evenly; */
   color: #757575;
 }
 .item,
 .item__positivFeedbacks {
-  margin-right: 15px;
+  margin-right: 10%;
 }
 .item__positivFeedbacks {
   width: 155px;
