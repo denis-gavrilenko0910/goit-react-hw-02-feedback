@@ -1,3 +1,6 @@
 .notification__container {
   text-align: center;
 }
+.notification {
+  text-shadow: 0px 1px 11px white;
+}

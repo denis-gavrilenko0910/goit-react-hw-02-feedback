@@ -5,6 +5,9 @@
 }
 .statistics__items {
   width: calc(100% / 3);
+  height: 25px;
+  border-radius: 7px;
+  box-shadow: #00ff2f 0px 7px 17px -7px;
   text-align: center;
   color: #757575;
 }
@@ -16,14 +19,18 @@
 .item__total {
   display: inline-block;
 }
-.item {
+
+.results_menu,
+.positivFeedbacks__menu {
+  display: flex;
+  /* justify-content: space-evenly; */
+  color: #757575;
+}
+.item,
+.item__positivFeedbacks {
   margin-right: 15px;
 }
-.total__container {
-  text-align: center;
-}
-.results_menu {
-  display: flex;
-  justify-content: space-evenly;
-  color: #757575;
+.item__positivFeedbacks {
+  width: 155px;
+  display: block;
 }

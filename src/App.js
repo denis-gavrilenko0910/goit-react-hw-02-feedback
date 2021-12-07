@@ -45,14 +45,14 @@ class App extends React.Component {
           />
         </Section>
         <Section title="Statistics">
-          {total && (
+          {total > 0 && (
             <Statistics
               optionsAllStateData={optionsAllStateData}
               total={total}
               positivPercent={positivPercent}
             />
           )}
-          {!total && <Notification message="There are no feedbacks" />}
+          {!total > 0 && <Notification message="There are no feedbacks" />}
         </Section>
       </Container>
     );
